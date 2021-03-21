@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html> 
+    <head> <!--tags de configuracao-->
+        <title>Formulário de Pesquisa</title>
+        <link rel="stylesheet" href="Formulário de Pesquisa CODEPEN Jessica.css">
+    </head> 
+
+        <body> <!--corpo do site-->
+            <div class="container">
+                <header class="header">
+                    <h1 id="title" class="text-center">Formulário de Pesquisa por @jesskolori</h1>
+                    <p id="description" class="description text-center">
+                        Obrigado por nos ajudar a melhorar a plataforma
+                    </p>
+                </header>
+                <form id="survey-form"><!--início do Formulário-->
+                    <div class="form-group"> <!--Titulo do Campo-->
+                        <label id="name-label" for="name">Nome</label>
+                        <!--Campo para escrita-->
+                        <input 
+                          type="text"
+                          name="name"
+                          id="name"
+                          class="form-control"
+                          placeholder="Escreva seu Nome"
+                          required
+                        />
+                    </div>
+                    <div class="form-group"> <!--Titulo do Campo-->
+                        <label id="email-label" for="email">Email</label>
+                        <!--Campo para escreve email-->
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          class="form-control"
+                          placeholder="Escreva seu Email"
+                          required 
+                        />
+                    </div>
+                    <div class="form-group"> <!--Titulo do Campo-->
+                        <label id="number-label" for="number">Idade<span class="clue">(optional)</span></label>
+                        <!--Campo para colocar idade-->
+                        <input 
+                          type="number"
+                          name="age"
+                          id="number"
+                          min="10"
+                          max="99"
+                          class="form-control"
+                          placeholder="Idade"
+                        />
+                    </div>
+                    <div class="form-group"><!--Titulo do Campo-->
+                        <p>Qual opção descreve melhor sua função atual?</p>
+                        <!--Campo em forma de Menu de Opções-->
+                        <select id="dropdown" name="role" class="form-control" required>
+                            <option disabled select value>Selecione função atual</option>
+                            <option value="student">Estudante</option>
+                            <option value="job">Emprego em Período Integral</option>
+                            <option value="learner">Estudante em Tempo Integral</option>
+                            <option value="preferNo">Prefiro não dizer</option>
+                            <option value="other">Outro...</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><!--Titulo do Campo-->
+                        <p>Você recomendaria esta empresa para um amigo?</p>
+                        <label>
+                          <!--Campo de selecionar opção TODO: Pesquiser sig de CHECKED-->
+                          <input 
+                            name="user-recommend"
+                            value="definitely"
+                            type="radio"
+                            class="input-radio"
+                            checked 
+                        />Definitivamente sim</label>
+                        </label>
+                        
+                        <label>
+                            <input 
+                              name="user-recommend"
+                              value="maybe"
+                              type="radio"
+                              class="input-radio"
+                            />Talvez</label>
+                        </label> <!--TODO abaixo-->
+                        
+                        <label
+                        ><input 
+                           name="user-recommend"
+                           value="not-sure"
+                           type="radio"
+                           class="input-radio" 
+                          />Não tenho certeza</label
+                        > <!--TODO: Entender o motivo desse input estar com as setas diferentes-->
+                    </div>
+                    
+                    <div class="form-group"> <!--Titulo do Campo-->
+                        <p>
+                            O que você gostaria de ver melhorado?
+                            <span class="clue">(Selecione os que se aplicam)</span>
+                        </p>
+                        <!--Campo de selecionar várias opções-->
+                        <label
+                          ><input 
+                             name="prefer"
+                             value="frond-end-projects"
+                             type="checkbox"
+                             class="input-checkbox"
+                          />Projetos Front-end</label
+                        >
+
+                        <label>
+                            <input 
+                              name="prefer"
+                              value="back-end-projects"
+                              type="checkbox"
+                              class="input-checkbox"
+                            /> Projetos Back-end </label
+                        >
+
+                        <label
+                          ><input
+                            name="prefer"
+                            value="data-visualization"
+                            type="checkbox"
+                            class="input-checkbox"
+                          />Data Visualization</label
+                        >
+
+                        <label
+                          ><input
+                             name="prefer"
+                             value="challenges"
+                             type="checkbox"
+                             class="input-checkbox"
+                          />Challenges</label
+                        >
+
+                        <label
+                          ><input
+                             name="prefer"
+                             value="open-source-community"
+                             type="checkbox"
+                             class="input-checkbox"
+                          />Open Source Community</label
+                        >
+
+                        <label
+                          ><input
+                             name="prefer"
+                             value="gitter-help-rooms"
+                             type="checkbox"
+                             class="input-checkbox"
+                          />Gitter Help Rooms</label
+                          >
+                    </div>
+
+                    <div class="form-group"><!--Titulo do Campo-->
+                        <p>Algum Comentario ou sugestao?</p>
+                        <!--Campo para escrever comentario-->
+                        <textarea
+                          id="comments"
+                          class="input-textarea"
+                          name="comment"
+                          placeholder="Escreva seu comentario aqui..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group"> <!--Area do Botao ENVIAR-->
+                       <button type="submit" id="submit" class="submit-button">
+                           Enviar
+                       </button>
+                    </div>
+                </form>
+            </div>
+        </body> 
+
+</html> 
